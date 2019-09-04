@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+    <title>Credit Card</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="customer-container">
+            <h3>Customer Information</h3>
+            <form class="customer-form" name="ship">
+                <input type="text" class="customer-info" placeholder="First Name" name="shipFirstName" required />
+                <input type="text" class="customer-info" placeholder="Last Name" name="shipLastName" required />
+                <input type="text" class="customer-info" placeholder="Company" name="shipCompany" />
+                <input type="text" class="customer-info" placeholder="Address" name="shipAddress" required />
+                <input type="text" class="customer-info" placeholder="Apt, suite, etc." name="shipApt" required />
+                <input type="text" class="customer-info" placeholder="City" name="shipCity" required />
+                <input type="text" class="customer-info" placeholder="State" name="shipState" required />
+                <input type="number" class="customer-info" placeholder="Zip Code" name="shipZipCode" required />
+            </form>
+        </div>
+
+        <div class="billing-container">
+            <h3>Billing Information</h3>
+            <form class="billing-form" name="bill">
+                <input type="number" class="billing-info" placeholder="Card Number" required />
+                <input type="text" class="billing-info" placeholder="Name on Card" required />
+                <div class="card-exp">
+                    <select name="exp-month" class="billing-info exp month" placeholder="Exp. Month" required>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <input type="number" class="billing-info exp year" placeholder="Exp. Year" required />
+
+                </div>
+                <div class="billing-address">
+                    <h4 class="bill-address-text">Billing Address</h4>
+                    <p class="same-address-text">Same as Shipping Address <span><input type="checkbox" id="checkbox"
+                                name="checkbox" onclick="checkboxStatus()" /></span></p>
+                </div>
+                <input type="text" class="billing-info" placeholder="Address" name="billAddress" required />
+                <input type="text" class="billing-info" placeholder="Apt, suite, etc." name="billApt" required />
+                <input type="text" class="billing-info" placeholder="City" name="billCity" required />
+                <input type="text" class="billing-info" placeholder="State" name="billState" required />
+                <input type="number" class="billing-info" placeholder="Zip Code" name="billZipCode" required />
+            </form>
+        </div>
+
+        <div class="order-container">
+            <h3>Order Information</h3>
+            <div class="order-form">
+                <input class="order-info" placeholder="Subtotal" readonly/>
+                <input class="order-info" placeholder="Shipping" readonly/>
+                <input class="order-info" placeholder="Tax" readonly/>
+                <input class="order-info" placeholder="Order Total" readonly/>
+                <div class="button-holder">
+                    <button class="place-order">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" language="javascript">
+
+    function checkboxStatus(box) {
+        var x = document.getElementById("checkbox").checked;
+        if (!x) {
+            document.bill.billAddress.value = null;
+            document.bill.billApt.value = null;
+            document.bill.billCity.value = null;
+            document.bill.billState.value = null;
+            document.bill.billZipCode.value = null;
+        } else {
+            document.bill.billAddress.value = document.ship.shipAddress.value;
+            document.bill.billApt.value = document.ship.shipApt.value;
+            document.bill.billCity.value = document.ship.shipCity.value;
+            document.bill.billState.value = document.ship.shipState.value;
+            document.bill.billZipCode.value = document.ship.shipZipCode.value;
+        }
+    }
+
+</script>
+
+</html>

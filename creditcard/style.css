@@ -1,0 +1,120 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: conic-gradient(from 0deg at 50% 25%, #FDE9EA, #F6F1F2, #FDE9EA, #FDE9EA)
+}
+body{
+    margin: 0;
+    padding: 0;
+    color:#353339;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+h1{
+    font-size: 45px;
+}
+
+.container, .customer-container,
+.billing-container,
+.order-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-container, .billing-container, .order-container{
+    border: 2px solid #4C6264;
+    border-radius: 10px;
+    background-color: #F6F1F2;
+    margin:30px;
+    padding:15px;
+    width: 350px;
+    box-shadow: 4px 4px 4px #ccc;
+ 
+}
+
+.customer-info, .billing-info, .order-info{
+    background-color: rgba(118, 117, 130, 0.4);
+    border:none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin:20px;
+    width:325px;
+    height: 30px;
+    padding-left:10px;
+    outline:none;
+    display:flex;
+}
+
+.button-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.place-order{
+    background-color:#DEB3B6;
+    border:1px solid #4C6264;
+    font:inherit;
+    font-weight: bold;
+    border-radius: 25px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    margin: 20px;
+    outline:none;
+    cursor: pointer;
+    box-shadow: 0 4px 2px #ccc;
+}
+
+.place-order:hover{
+    background-color: #F2D2D5;
+    border:1px solid #4C6264;
+  
+}
+
+.place-order:active{
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px #ccc;
+}
+
+.billing-address{
+    width:325px;
+    padding:25px;
+}
+
+.card-exp{
+    width:auto;
+    margin:0;
+    padding:0;
+    display: flex; 
+    justify-content: space-around;
+}
+
+.exp{
+    width:135px;
+    margin:0;
+    padding-left:10px;
+    display: flex; 
+}
+
+.year{
+    border-radius: 5px;
+}
+
+.bill-address-text{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:0;
+}
+.same-address-text{  
+
+    margin:0;
+}

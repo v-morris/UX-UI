@@ -1,0 +1,1 @@
+Designed the layout in AdobeXD before coding. Screen captures included in "images" folder. Simple credit card form designed with just CSS. I included a simple JS function to verify if the checkbox is checked or not. If it is, it will copy your shipping address into the billing address input boxes.
